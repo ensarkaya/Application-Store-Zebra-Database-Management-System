@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Zebra</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  </head>
+  <body>
+
+    <p></p>
+
+
+    <div class="ui segment pushable">
+
+      <div class="ui inverted vertical labeled icon ui overlay left thin visible sidebar menu">
+
+        <a class="item" onlick="window.location='developerApplications.php';">
+          <i aria-hidden="true" class="th list icon"></i>
+          My Applications
+        </a>
+		<a class="item" onclick="window.location='developer create.html'">
+          <i aria-hidden="true" class="upload icon"></i>
+          Add/Update Application
+        </a>
+		<a class="item" onclick="window.location='index.html';">
+		<i aria-hidden="true" class="sign-out icon" ></i>
+		Log-out
+		</a>
+      </div>
+
+    
+
+      <h2 class="ui header" style="margin-left:170px; margin-top:10px;">
+        <i class="upload icon"></i>
+        <div class="content">
+          Upload and Request Application
+        </div>
+      </h2>
+
+	<form action="appCreate.php" method="post">
+      <div class="ui form" style="margin-left:170px; margin-top:10px; margin-right: 15px;">
+        <div class="field">
+          <label>Application Name</label>
+          <input type="text" name="name" placeholder="Application Name">
+        </div>
+      </div>
+
+      <select name="categorySel" class="ui dropdown" style="margin-left:170px; margin-top:10px; margin-right: 15px;">
+        <option value="game">Game</option>
+        <option value="education">Education</option>
+        <option value="music">Music</option>
+        <option value="socialNetworking">Social Networking</option>
+        <option value="dating">Dating</option>
+        <option value="business">Business</option>
+        <option value="health">Health</option>
+        <option value="tools">Tools</option>
+      </select>
+
+      <div class="ui form" style="margin-left:170px; margin-top:10px; margin-right: 15px">
+        <div class="field">
+          <label>Description</label>
+          <textarea type="textarea" name="description" placeholder="Tell us more"></textarea>
+        </div>
+      </div>
+
+	  <div class="ui right labeled input" style="margin-left:170px; margin-top:10px; margin-right: 15px;">
+        <label for="size" class="ui label">Min Ram</label>
+        <input type="number" placeholder="Size"  min="0" max="9999999999" id="size" name="size">
+		<div class="ui basic label">MB</div>
+      </div>
+
+	  <div class="ui right labeled input" style="margin-left:170px; margin-top:10px; margin-right: 15px;">
+        <label for="version" class="ui label">Version</label>
+        <input type="number" placeholder="Version" min="0" max="9999999999" id="version" name="version">
+		<div class="ui basic label"></div>
+      </div>
+
+      <div class="ui right labeled input" style="margin-left:170px; margin-top:10px; margin-right: 15px;">
+        <label for="price" class="ui label">$</label>
+        <input type="number" placeholder="Price" min="0" max="9999999999" id="price" name="price">
+        <div class="ui basic label">.00</div>
+      </div>
+
+      <div class="ui middle aligned center aligned grid container" style= "margin-left:170px; margin-top: 20px;">
+        <div class="ui fluid segment">
+			<input class="ui large positive button" type="submit" name="upload" value="Upload the Application">
+
+			<input class="ui large negative button" type="submit" name="update" value="Update the Application">
+        <input type="file" (change)="fileEvent($event)" class="inputfile" id="embedpollfileinput" />
+        </div>
+      </div>
+
+  </form>
+
+
+
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+  </body>
+</html>

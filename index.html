@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Zebra</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  </head>
+  <body>
+
+    <p></p>
+
+    <style type="text/css">
+      body { background-color:white; color:black; }
+      p { font-family: Tahoma, Verdana; font-size: 19px; }
+    </style>
+
+    <div align="center">
+      <img src="../static/icon.png" width="100" height="100" alt="CenterPic" border="0" align="center"/>
+
+       <p></p>
+
+      <div class="ui container">
+        <!-- HEADER -->
+        <div class="ui card">
+          <div class="content">
+            <div class="header">
+              Log in to your Zebra Account
+            </div>
+            </div>
+            <div class="content">
+
+              <form action="login.php" method="post">
+              <div class="ui form success">
+                <div class="field">
+                  <i aria-hidden="true" class="user icon"></i>
+                  <p></p>
+                  <input type="text" placeholder="e-mail" name="email">
+                </div>
+              </div>
+
+              <p></p>
+
+              <div class="ui form success">
+                <div class="field">
+                  <i aria-hidden="true" class="lock icon"></i>
+                  <p></p>
+                  <input type="password" placeholder="Password" name="password">
+                </div>
+              </div>
+
+              <p></p>
+
+            </div>
+            <div class="content extra">
+              <button style = "margin:10px;" class="ui large positive button" type="submit" name="button">Log In!</button>
+            </div>
+
+             </form>
+             <form action="signup.html" method="get">
+               <button style = "margin:5px;" class="ui large negative button" type="submit" name="button">Sign Up!</button>
+             </form>
+
+
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+  </body>
+</html>
